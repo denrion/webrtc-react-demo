@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  peerjs-server:
+    container_name: peerjs-server
+    image: peerjs/peerjs-server
+    ports:
+      - '9000:9000'
+  webrtc-backend:
+    container_name: webrtc-backend
+    build: ./server
+    ports:
+      - '8080:8080'
+  webrtc-fronted:
+    container_name: webrtc-fronted
+    build: ./client
+    ports:
+      - '80:80'
+    depends_on:
+      - peerjs-server
+      - webrtc-backend
