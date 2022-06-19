@@ -43,4 +43,4 @@ COPY . .
 # Copy the built /dist folder from the development image
 COPY --from=development /usr/src/app/dist ./dist
 
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start"]

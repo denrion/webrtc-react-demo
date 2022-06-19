@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'app',
+      name: 'webrtc-demo',
       script: 'dist/server.js',
       instances: 'max',
       env: {
